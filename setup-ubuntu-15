@@ -1,0 +1,83 @@
+Install Workspace Grid to get a two-dimensional layout of workspaces.
+
+https://extensions.gnome.org/extension/484/workspace-grid/
+
+Install No Topleft Hot Corner to remove that annoyance.
+
+https://extensions.gnome.org/extension/118/no-topleft-hot-corner/
+
+Install TopIcons extensions to not have legacy tray icons, e.g. Dropbox, take space on the bottom left corner of the screen
+
+https://extensions.gnome.org/extension/495/topicons/
+
+
+Install
+
+curl
+git
+hibernate
+
+Download and install Hack font
+http://sourcefoundry.org/hack/
+
+For example, to put in the user ~/.fonts directory
+
+HACKFONTURL=https://github.com/chrissimpkins/Hack/releases/download/v2.018/Hack-v2_018-ttf.zip \
+sh -c '
+mkdir -p ~/.fonts && \
+cd ~/.fonts && \
+curl -L $HACKFONTURL > hackfont.zip \
+&& unzip hackfont.zip \
+&& rm hackfont.zip'
+
+
+
+
+git clone https://github.com/chriskempson/base16-gnome-terminal.git
+./base16-gnome-terminal/base16-monokai.dark.sh 
+
+curl -L https://raw.githubusercontent.com/jtheoof/dotfiles/master/dircolors.monokai > ~/.dircolors
+
+
+apt-get install texlive texlive-math-extra texlive-bibtex-extra latexmk xzdec biber
+
+tlmgr init-usertree
+tlmgr install mathdesign etoolbox csquotes ly1 hyphenat
+
+
+cp install/firefox/user.js `./install/firefox_default_user.py`
+
+apt-get install git python-dev python3-dev gfortran
+
+echo '. ~/ubuntu-gnome-config/bashrc-additions.sh' >> ~/.bashrc
+
+
+---
+
+apt-get install cifs-utils
+
+add to /etc/fstab
+
+//192.168.167.200/Rasmus /mnt/cissi/Rasmus cifs user,uid=rasmus,rw,suid,credentials=/etc/cifspwd 0 0
+//192.168.167.200/Public /mnt/cissi/Public cifs user,uid=rasmus,rw,suid,credentials=/etc/cifspwd 0 0
+
+add to /etc/cifspwd
+
+username=Rasmus
+password=...
+
+- - - 
+
+# Needed for matplotlib:
+
+sudo apt-get install pkg-config libpng12-dev libfreetype6-dev
+
+
+- - -
+
+sudo apt-get install pdfmod pdftk
+
+- - -
+
+
+sudo apt-get install r-base-core
