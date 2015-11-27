@@ -63,6 +63,8 @@ curl -L $HACKFONTURL > hackfont.zip \
 && rm hackfont.zip'
 ```
 
+Open Tweaks and go to Fonts tab to set Monospace to `Hack`. How to do that from the shell?
+
 ### Change colors in Gnome Terminal
 
 git clone https://github.com/chriskempson/base16-gnome-terminal.git
