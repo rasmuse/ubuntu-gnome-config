@@ -19,7 +19,21 @@ https://extensions.gnome.org/extension/495/topicons/
 ## First round of apt-get
 
 ```
-sudo apt-get install curl git hibernate
+sudo apt-get install curl git
+```
+
+## Enable hibernate
+
+```
+apt-get install hibernate pm-utils
+```
+
+(Not sure whether ```pm-utils``` is needed. This is black magic zone.)
+
+Now put some secret configuration in a new file:
+
+```
+sudo cp ~/ubuntu-gnome-config/hibernate/com.ubuntu.enable.hibernate.pkla /var/lib/polkit-1/localauthority/50-local.d/
 ```
 
 
