@@ -151,3 +151,8 @@ install.packages(c('rzmq','repr','IRkernel','IRdisplay'),
 IRkernel::installspec()
 ```
 
+## VLC
+
+```
+sudo apt-get install vlc
+```
